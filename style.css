@@ -1,0 +1,990 @@
+:root {
+    --pink: #d96b91;
+    --dark-pink: #9e3f63;
+    --light-pink: #fce8ef;
+    --rose: #b85c7b;
+    --gold: #c69a55;
+    --cream: #fffaf7;
+    --dark: #2c2025;
+    --gray: #71676b;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    height: 82px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 250, 247, .97);
+    border-bottom: 1px solid #f1dce3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--dark-pink);
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+}
+
+nav a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #55474c;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--pink);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--dark-pink);
+    cursor: pointer;
+}
+
+.hero {
+    min-height: calc(100vh - 82px);
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 60px;
+    background:
+        radial-gradient(circle at 85% 20%, #f7cad9 0, transparent 28%),
+        linear-gradient(135deg, #fffaf7, #fce8ef);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow,
+.page-banner p,
+.section-title p,
+.quote-section p,
+.bridal-hero > div > p:first-child,
+.location-section > div > p:first-child {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(55px, 7vw, 92px);
+    line-height: .98;
+    font-weight: 400;
+    color: var(--dark);
+}
+
+.hero h1 span {
+    color: var(--dark-pink);
+    font-style: italic;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: var(--gray);
+    max-width: 540px;
+    margin: 25px 0 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dark-pink);
+    color: white;
+    padding: 14px 27px;
+    border: 1px solid var(--dark-pink);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark-pink);
+}
+
+.hero-card {
+    width: min(380px, 100%);
+    aspect-ratio: 1 / 1.15;
+    margin: auto;
+    border: 1px solid var(--gold);
+    background: linear-gradient(145deg, #fff, #f6d2dd);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 25px 25px 0 rgba(184, 92, 123, .1);
+}
+
+.hero-card .flower {
+    font-size: 60px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.hero-card h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--dark-pink);
+}
+
+.hero-card p {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+}
+
+.hero-card small {
+    margin-top: 15px;
+}
+
+.gold-line {
+    height: 1px;
+    width: 80px;
+    background: var(--gold);
+    margin: 20px 0;
+}
+
+.section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2,
+.about-text h2,
+.booking-info h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.welcome {
+    background: white;
+}
+
+.welcome-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.large-text {
+    font-family: 'DM Serif Display', serif;
+    color: var(--dark-pink);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.welcome-grid p {
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.text-link {
+    color: var(--dark-pink);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.beauty-box {
+    height: 420px;
+    background:
+        linear-gradient(135deg, rgba(158,63,99,.8), rgba(217,107,145,.5)),
+        #eab8c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beauty-box div {
+    text-align: center;
+    border: 1px solid white;
+    padding: 50px;
+    color: white;
+}
+
+.beauty-box span {
+    font-size: 50px;
+}
+
+.beauty-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto auto 45px;
+}
+
+.service-card {
+    padding: 35px 25px;
+    background: white;
+    border: 1px solid #f2dfe5;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(158, 63, 99, .12);
+}
+
+.service-icon {
+    color: var(--gold);
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 13px;
+    min-height: 65px;
+}
+
+.service-card strong {
+    color: var(--dark-pink);
+    font-size: 13px;
+}
+
+.center {
+    text-align: center;
+}
+
+.quote-section {
+    padding: 110px 8%;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #9e3f63, #d96b91);
+}
+
+.quote-section span {
+    font-family: serif;
+    font-size: 70px;
+    color: #f4c5d4;
+}
+
+.quote-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.quote-section p {
+    color: #f5d3df;
+    margin-top: 25px;
+}
+
+.cta {
+    background: #fff1f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 45px;
+    font-weight: 400;
+}
+
+/* Page Banner */
+
+.page-banner {
+    padding: 100px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #fce8ef, #fffaf7);
+}
+
+.page-banner h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(45px, 6vw, 70px);
+    font-weight: 400;
+    color: var(--dark-pink);
+}
+
+/* About */
+
+.about-section {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+    background: white;
+}
+
+.about-image {
+    height: 550px;
+    background: linear-gradient(145deg, #d96b91, #9e3f63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.about-image div {
+    border: 1px solid #f6d1dd;
+    padding: 60px 45px;
+    text-align: center;
+}
+
+.about-image span {
+    font-size: 50px;
+    color: #f4cf9d;
+}
+
+.about-image h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 55px;
+}
+
+.about-image p {
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.about-text > p:not(.eyebrow) {
+    color: var(--gray);
+    margin: 20px 0;
+}
+
+.info-strip {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+    border-top: 1px solid #ead8de;
+    padding-top: 25px;
+}
+
+.info-strip div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-strip strong {
+    color: var(--dark-pink);
+    font-size: 22px;
+}
+
+.info-strip span {
+    font-size: 11px;
+    color: var(--gray);
+}
+
+.values {
+    background: var(--light-pink);
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.value-grid > div {
+    background: white;
+    padding: 35px;
+}
+
+.value-grid span {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.value-grid h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.value-grid p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* Services */
+
+.service-list {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 10px;
+    border-bottom: 1px solid #e9d7de;
+}
+
+.service-row div {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    column-gap: 15px;
+}
+
+.service-row span {
+    grid-row: span 2;
+    color: var(--gold);
+    padding-top: 5px;
+}
+
+.service-row h2 {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.service-row p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.service-row > strong {
+    color: var(--dark-pink);
+    white-space: nowrap;
+}
+
+.price-note {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    background: #fff0f4;
+    padding: 18px 25px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* Bridal */
+
+.bridal-hero {
+    min-height: 650px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(76, 24, 43, .88), rgba(76,24,43,.2)),
+        linear-gradient(135deg, #c77791, #6d263f);
+    color: white;
+}
+
+.bridal-hero > div {
+    max-width: 650px;
+}
+
+.bridal-hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(60px, 8vw, 100px);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.bridal-hero > div > p:not(:first-child) {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #f9e4eb;
+}
+
+.bridal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.bridal-card {
+    padding: 45px 35px;
+    background: white;
+    border: 1px solid #edd9e0;
+}
+
+.bridal-card span {
+    color: var(--gold);
+}
+
+.bridal-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    margin: 15px 0;
+}
+
+.bridal-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.bridal-card strong {
+    color: var(--dark-pink);
+}
+
+.bridal-quote {
+    text-align: center;
+    padding: 100px 20px;
+    background: var(--light-pink);
+}
+
+.bridal-quote h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 35px;
+}
+
+/* Gallery */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: scale(.98);
+}
+
+.gallery-item span {
+    font-size: 55px;
+    color: #f7d6e1;
+}
+
+.gallery-item h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+}
+
+.pink {
+    background: #d96b91;
+}
+
+.rose {
+    background: #b85c7b;
+}
+
+.cream {
+    background: #c9a7a0;
+}
+
+.dark-pink {
+    background: #893653;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.gallery-note p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* Booking */
+
+.booking-section {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.booking-info h2 {
+    margin-bottom: 25px;
+}
+
+.booking-info > p:not(.eyebrow) {
+    color: var(--gray);
+}
+
+.contact-mini {
+    margin-top: 35px;
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+}
+
+.booking-form {
+    background: white;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(100, 40, 60, .08);
+}
+
+.booking-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #e6d4da;
+    background: #fffafa;
+    font-family: inherit;
+    outline: none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: var(--pink);
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* Contact */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: white;
+}
+
+.contact-card {
+    padding: 35px 25px;
+    border: 1px solid #ead9df;
+}
+
+.contact-card > span {
+    font-size: 35px;
+    color: var(--gold);
+}
+
+.contact-card h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.contact-card p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.location-section {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #9e3f63, #d96b91);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.location-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 55px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.location-section p {
+    color: #f8dce5;
+}
+
+/* Footer */
+
+footer {
+    background: #271b20;
+    color: white;
+    padding: 65px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-grid h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #f2a7bf;
+    font-size: 35px;
+}
+
+.footer-grid h3 {
+    color: #d9a56b;
+    margin-bottom: 15px;
+}
+
+.footer-grid p,
+.footer-grid a {
+    display: block;
+    color: #cdbfc4;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.footer-grid a:hover {
+    color: #f2a7bf;
+}
+
+.copyright {
+    border-top: 1px solid #44343b;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    color: #8f8086;
+    font-size: 11px;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: 999;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: white;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 15px 8%;
+        border-bottom: 1px solid #f5e7eb;
+    }
+
+    .hero,
+    .welcome-grid,
+    .about-section,
+    .booking-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .value-grid,
+    .bridal-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta,
+    .location-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-card {
+        width: 90%;
+    }
+
+    .service-cards,
+    .value-grid,
+    .bridal-grid,
+    .gallery-grid,
+    .contact-section,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-row {
+        align-items: flex-start;
+    }
+
+    .service-row h2 {
+        font-size: 23px;
+    }
+
+    .service-row p {
+        font-size: 12px;
+    }
+
+    .about-image {
+        height: 400px;
+    }
+
+    .info-strip {
+        gap: 15px;
+    }
+
+    .booking-form {
+        padding: 25px;
+    }
+
+    .location-section h2 {
+        font-size: 43px;
+    }
+
+    .bridal-quote h2 {
+        font-size: 42px;
+    }
+
+    .whatsapp {
+        right: 18px;
+        bottom: 18px;
+    }
+}
