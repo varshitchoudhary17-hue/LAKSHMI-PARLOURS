@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | LAKSHMI PARLOURS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <span>LAKSHMI</span>
+        <small>PARLOURS</small>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="bridal.html">Bridal</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-banner">
+    <p>YOUR BEAUTY APPOINTMENT</p>
+    <h1>Book With Us</h1>
+</section>
+
+<section class="section booking-section">
+
+    <div class="booking-info">
+        <p class="eyebrow">LAKSHMI PARLOURS</p>
+        <h2>Let's Plan Your Beauty Session</h2>
+
+        <p>
+            Fill in the form and we'll prepare your appointment
+            request for WhatsApp.
+        </p>
+
+        <div class="contact-mini">
+            <p>📞 <strong>8868044057</strong></p>
+            <p>⏰ <strong>9:00 AM – 9:00 PM</strong></p>
+            <p>📍 <strong>Meerut Cantt, Kankerkhera</strong></p>
+        </div>
+    </div>
+
+    <form id="bookingForm" class="booking-form">
+
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label>Select Service</label>
+        <select id="service" required>
+            <option value="">Choose a service</option>
+            <option>Haircut / Hair Styling - ₹299</option>
+            <option>Hair Colouring</option>
+            <option>Facial - ₹699</option>
+            <option>Cleanup</option>
+            <option>Waxing</option>
+            <option>Manicure - ₹359</option>
+            <option>Makeup</option>
+            <option>Bridal Makeup - ₹6,999</option>
+            <option>Mehndi</option>
+            <option>Spa</option>
+        </select>
+
+        <label>Preferred Date</label>
+        <input type="date" id="date" required>
+
+        <label>Preferred Time</label>
+        <input type="time" id="time" required>
+
+        <label>Additional Message</label>
+        <textarea id="message" rows="4"
+            placeholder="Anything you'd like us to know?"></textarea>
+
+        <button type="submit" class="btn full-btn">
+            Send Booking Request on WhatsApp
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h2>LAKSHMI</h2>
+            <p>Women's Beauty Parlour</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>📞 8868044057</p>
+            <p>✉ varshitchoudhary17@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="copyright">© 2026 LAKSHMI PARLOURS</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
